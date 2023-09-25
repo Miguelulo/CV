@@ -1,0 +1,281 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.6.4, 13 Nov 2021) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,letterpaper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+\input{pubs-authoryear}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+% \input{pubs-num}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Miguel San Martín Agurto}
+\tagline{Electronic engineer: Power electronics / Automatic control}
+%% You can add multiple photos on the left or right
+%---------FOTO-----------------------------------------------------
+\photoR{2.8cm}{picture_msa}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{miguel.sanmartin.agurto@gmail.com}
+  \phone{+49 1520 8702788}
+  %\mailaddress{}
+  \location{Böhmische Straße, 12055, Neukölln, Berlin}
+  %\homepage{www.homepage.com}
+  %\twitter{@twitterhandle}
+  \linkedin{miguel-san-martin-agurto}
+  %\github{your_id}
+  %\orcid{0000-0000-0000-0000}
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+  %%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\cvsection{Personal information}
+\begin{itemize}
+    \item \textbf{Date of birth}: August 2nd, 1992 
+    \item \textbf{Nationality}: Chilean
+    \item \textbf{Marital status}: Single
+\end{itemize}
+
+\cvsection{About me}
+I am an Electronic Engineer specialized in Industrial Electronics with knowledge in Control and Automation. I consider myself a versatile professional, capable of adapting to different work environments and always ready to take on new challenges in the field of electronics.\\
+
+I hold a B2 IELTS certificate, which I obtained during my 8-month stay in Ireland as part of an English course. Currently, I reside in Germany on a Working Holiday Visa, further expanding my international experience.\\ 
+
+I am available for immediate employment and have no restrictions on traveling for work assignments. Additionally, I am adaptable and have no reservations about relocating to different cities if required.
+
+ 
+\cvsection{Working experience}
+
+\cvevent{Electrical adviser}{Onduladores de Chile}{2022 -- 2023}{Chile}
+\begin{itemize}
+\item In charge of verifying technical information to ensure accuracy and \\ identify  potential issues.
+\item Review projects according to the current Chilean electrical \\standard.
+\item Drafted technical and economics reports for engineering \\ department.
+\end{itemize}
+\divider
+\cvevent{Field service engineer}{Onduladores de Chile}{2019 -- 2022}{Chile}
+\begin{itemize}
+\item Responsible for installing, repairing, and maintaining UPS systems.
+\item Produced descriptive narrative and calculation reports for \\ customers as well as conducted training courses for them. 
+\end{itemize}
+\divider
+\cvevent{Research assistance}{Centro Científico Tecnológico de Valparíso (CCTVal)}{2018-- 2019}{Chile}
+\begin{itemize}
+\item Designed a small automated station for measuring a radioactive pellet.
+\item Built a photon detector circuit and conducted data analysis.
+\end{itemize}
+
+
+\medskip
+
+%\cvsection{A Day of My Life}
+%---------------------------------------------
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+%----------------------------------------------
+%\wheelchart{1.5cm}{0.5cm}{%
+%  6/8em/accent!20/{Eat and sleep},
+%  3/8em/accent!20/English class,
+%  8/8em/accent!20/Study-time,
+%  2/10em/accent/Reserved for job,
+%  5/6em/accent!10/Visit new places
+%}
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+
+\switchcolumn
+
+%\cvsection{My Life Philosophy}
+
+%\begin{quote}
+%``One day, you'll leave this world behind so live a life you will remember.''
+%\end{quote}
+
+\cvsection{Education}
+
+\cvevent{B.Sc.\ in electronic engineering}{Universidad Técnica Federico Santa María}{2011 -- 2018}{Chile}
+Thesis title: `` \textit{Implementation of a magnetohidrodynamic propulsion system for vessels}''
+
+\cvsection{Certificates}
+
+\cvevent{Overall score band 6.5 of 9}{International English Language Testing System (IELTS)}{2023}{Ireland}
+\divider
+\cvevent{SCRUM Fundamentals}{Scrumstudy - Targeting success (VMEdu)}{2023}{Online}
+
+
+\cvsection{Skills \& Knowledge}
+
+\cvtag{PLC programming} \cvtag{SCADA} \cvtag{P\&ID}\\
+\cvtag{PLECS/PSIM}  \cvtag{Eagle (Desing PBC)}  \\
+\cvtag{SQL} \cvtag{C} \cvtag{Python}\\
+\cvtag{Matlab/Simulink}  \cvtag{Wolfram Mathematica}
+%\divider\smallskip
+
+\cvsection{Strengths}
+
+\cvtag{Hard-working}  \cvtag{Committed} \cvtag{Easy learning} \\
+\cvtag{Organized} \cvtag{Responsible} \cvtag{Team-working}\\
+
+
+%\cvtag{Computer skills}
+%\cvtag{Software skills}\\
+%\cvtag{Statistical Analysis}
+
+
+\cvsection{Languages}
+
+
+\cvskill{German \scriptsize{(A1 not certified)}}{1}
+
+\divider
+\cvskill{English \scriptsize{(certified at B2 level)}}{3}
+
+\divider
+\cvskill{Spanish \scriptsize{(Mother tongue)}}{5}
+
+%\cvsection{Programming}
+
+%\cvskill{C}{3}
+
+%\divider
+%\cvskill{Python}{3}
+
+
+\cvsection{Ongoing projects}
+
+\cvachievement{\faWpforms}{Applied data science}{Course in progress}
+
+\divider
+
+\cvachievement{\faSitemap}{Machine learning}{Next in the list}
+
+%\cvachievement{\faRecycle}{Sustainable engineering}{"Reduce, Reuse and Recycle"}
+
+%\divider
+
+%\cvachievement{\faBatteryFull}{Renewable energy}{Solar / wind energy, Green hydrogen} 
+
+%\cvsection{Hobbies}
+
+%\cvachievement{\faChild}{Sports}{Swimming, Football, Cycling}
+
+%\divider
+
+%\cvachievement{\faTv}{Movies and Series}{Sci-fi, Drama, Action}
+
+
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vspace etc to make adjustments.
+\medskip
+
+
+
+% \divider
+
+\end{paracol}
+
+
+\end{document}
